@@ -1,0 +1,938 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter'; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+p{
+    font-size: 12px;
+    line-height: 16px;
+}
+.navbar{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: #fff;
+    z-index: 1;
+    /* background-color: #ddef15; */
+}
+
+.logo{
+    margin-left: 5rem; 
+    line-height: 60px;
+    margin-top: 10px;
+}
+
+.menu-section{
+    width: 50vw;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.menu ul{
+    list-style: none;
+    display: block;
+    float:left;
+    /* gap: 1rem; */
+}
+.menu li{
+    display: inline;
+    padding: 0 1rem;
+}
+.menu li a{
+    line-height: 60px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-btn{
+    display: block;
+    float:right;
+    margin-right: 2.5rem;
+    line-height: 60px;
+}
+/*Icon for registration*/
+.chkbox-reg{
+    display: none;
+    float:right;
+    margin-right: 2.5rem;
+    line-height: 60px;
+    font-size: 1.88rem;
+}
+.chkbox-reg a{
+    color: rgb(78, 77, 77);
+}
+
+.nav-btn a{
+    /* background-color: #0866FF; */
+    background-color: #00B7D7;
+    padding: .75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.nav-btn a:hover{
+    background-color:#0754cf;
+    transition: 0.5s;
+}
+
+#checkbox, #checkbox-reg{
+    display: none;
+}
+#checkbox:checked ~ .menu{  
+    left: 0;
+}
+.chkbox-label{
+    font-size: 30px;
+    float: right;
+    line-height: 65px;
+    /* margin-top: 10px; */
+    margin-left: -1rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*Banner Section Style*/
+ .banner{
+    width: 100vw;
+    padding:1rem;
+    margin-top:6rem;
+    background-color: #F5F7FA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.banner-heading{
+    width: 480px;
+    padding: 1.4rem;
+    text-align: center;
+}
+.banner-heading h1{
+    font-size: 2.25rem;
+    padding-bottom: 10px;
+    color: rgb(78, 77, 77)
+}
+.banner-heading p{
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+    color: rgb(78, 77, 77);
+}
+.btn{
+    margin-top: 3rem;
+ 
+}
+
+.btn a{
+    padding: 12px 16px;
+    background-color: #00B7D7;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+.btn a:hover{
+    background-color: #0754cf;
+}
+.banner-img{
+    width: 600px;
+    height: 400px;
+
+}
+.banner-img img{
+    max-width: 600px;
+    max-height: 400px;
+}
+
+/*Client Section Style*/
+ .clients{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+}
+.clients h2{
+    font-size: 24px;
+    padding: 5px 0;
+    color: rgb(78, 77, 77);
+}
+.clients p{
+    font-size: 0.75rem;
+    padding-bottom: 15px;
+    color: rgb(78, 77, 77);
+}
+.client-logo{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6rem;
+    justify-content: space-evenly;
+}
+.client-logo-s img{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/*key-sectors section style*/
+.key-sectors{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sectors-heading{
+    width: 380px;
+    text-align: center;
+    color:rgb(78, 77, 77);
+}
+.sectors-heading h1{
+    font-size: 1.56rem;
+    line-height: 1.87rem;
+    font-weight: 600;
+}
+.sectors-heading p{
+    font-size: 12px;
+    line-height: 1.5rem;
+}
+.card-section{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    width: 185px;
+    height: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(78, 77, 77);
+}
+.card h2{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding: 1rem 0 0.5rem 0;
+}
+.card p{
+    font-size: 11px;
+    line-height: 14px;
+}
+.icon-container{
+    width: 34px;
+    height: 34px;
+    background-color: #E8F5E9; 
+    border-radius: 7px 3.5px 12.5px 3.5px;
+}
+.icon-container i img{
+    width: 34px;
+    height: 34px;
+    position: relative;
+    top: -8px;
+    left: -12px;
+    font-weight: 600;
+}
+
+/*Helping Blockchain section style*/
+.helping{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #F5F7FA;
+    padding: 3rem 1.5rem;
+    gap: 6rem;
+}
+
+.helping-lt{
+    align-content: center;
+    width: 375px;
+    color: rgb(78, 77, 77);
+    text-align: left;
+}
+.helping-lt h1{
+    width: 285px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+}
+.helping-lt p{
+    font-size: 12px;
+    line-height: 16px;
+}
+.helping-rt{
+    width: 375px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.55rem;
+    color: rgb(78, 77, 77);
+}
+.helping-card{
+    width: 175px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.helping-card i{
+    font-size: 30px;
+    color: green;  
+} 
+.helping-card h2{
+    font-size: 20px;
+    line-height: 25px;
+}
+.small-icon i{
+    font-size: 38px;
+}
+
+/*Blockchain Future section style*/
+.future{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1.5rem;
+}
+.future-header{
+    width: 770px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(78, 77, 77);
+}
+.future-header h1{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+}
+.future-header p{
+    width: 435px;
+    text-align: center;
+}
+.future-card{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 6rem;
+}
+.future-singlecard{
+    width: 200px;
+}
+.future-singlecard img{
+    border-radius: 10px;
+}
+.future-singlecard img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.future-singlecard img:hover ~ .future-text-card{
+    z-index: -1;
+}
+.future-text-card{
+    width: 180px;
+    height: 125px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F5F7FA;
+    border-radius: 10px;
+    position: relative;
+    top: -50px;
+    left: 10px;
+}
+.future-text-card a{
+    text-decoration: none;
+    color: #4CAF4F;
+    font-size: 14px;
+    font-weight: 600;
+}
+.future-text-card:hover{
+    background-color: #CDC2C2;
+    transition: 0.5s;
+}
+
+/*Contact Us section Style*/
+.contact{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    align-items: center;
+    padding: 3rem 0;
+    /* background-color: #F5F7FA; */
+    background-color: #ECF7FC;
+}
+
+.contact-lt img{
+    width: 375px;
+    height: 375px;
+    border: .5px solid #ECF7FC;
+    border-radius: 10px;
+    margin-top: 2.4rem;
+}
+.contact-rt{
+    border-radius: 5px;
+}
+.contact-form{
+    width: 480px;
+    height: auto;
+}
+.contact-rt form{
+    padding: 1.2rem 0;
+    border-radius: 10px;
+}
+.contact-form h2{
+    font-size: 30px;
+    margin-left: 5px;
+    
+}
+.contact-form input{
+    width: 100%;
+    padding: 15px 20px 15px 30px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+.contact-form textarea{
+    width: 100%;
+    height: 150px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: 'Roboto';
+    resize: none;
+    outline: none;
+    border: none;
+}
+.contact-form textarea::placeholder{
+    font-size: 18px;
+    font-family: 'Roboto';
+}
+.contact-form input:onfocus, textarea:onfocus{
+    background-color: #c4c1c1;
+}
+.contact-form button{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background: #00B7D7;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+.contact-form button:hover{
+    background-color: #12869b;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*Footer section style*/
+.footer{
+    width: 100vw;
+    background-color: #1E293B;
+    margin-top: 9rem;
+    padding: 9rem 3rem 6rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5rem;
+    align-items: baseline;
+    color: white;
+}
+.middle-2{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+
+
+.footer-logo img{
+    margin-left: -10px;
+}
+.footer-logo p{
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    line-height: 14px;
+    font-weight: 400;
+}
+.social-icon{
+    width: 110px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.social-icon a{
+    color: white;
+}
+
+.foo-company h2, .foo-support h2, .subscription h2{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+.foo-company ul, .foo-support ul{
+    list-style: none;
+}
+.foo-company li a, .foo-support li a{
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.subscription input{
+    width: 100%;
+    padding: 8px 25px;
+    background-color: #4B5462;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.subscription button, .sbs-btn{
+    display: inline;
+    float: right;
+    background: transparent;
+    outline:none;
+    border:none;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    top: -12px;
+    left: -5px;
+}
+.subscription button:hover{
+    cursor: pointer;
+}
+
+/*for screen width less than 1080px*/
+@media only screen and (max-width: 1080px) {
+
+    .logo img{
+        width: 150px;
+        height: 25px;
+    }
+    .menu-section{
+        width: 70vw;
+    }
+
+    .banner-heading h1{
+        font-size: 1.75rem;
+    }
+    .banner-heading p{
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .banner-img, .banner-img img{
+        width: 400px;
+        height: 266px;
+    }
+    .client-logo{
+        column-gap: 4rem;
+    }
+    .helping{
+        gap: 2.5rem;
+    }
+    .helping-lt{
+        padding-left: 1rem;
+    }
+    .helping-lt h1{
+        font-size: 20px;
+    }
+    .helping-lt p{
+        font-size: 11px;
+    }
+    .helping-card i{
+        font-size: 26px;
+    }
+    .helping-card h2{
+        font-size: 18px;
+    }
+    .helping-rt{
+        width: 480px;
+    }
+
+    .future-card{
+        gap: 4rem;
+    }
+    .contact-lt img{
+        width: 330px;
+        margin-top: 2.5rem;
+    }
+    .contact-form{
+        width: 410px;
+    }
+}
+
+/*for screen width less than 768px*/
+@media only screen and (max-width: 768px) {
+    .chkbox-label{
+        display: block;
+    }
+    .menu{
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        transition: 0.5s;
+        /* background-color:#0866FF; */
+        background-color: #e3ecfa;;
+       
+    }
+    .menu ul{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        
+    }
+    .menu ul li a{
+        color: rgb(46, 43, 43);
+        line-height: 50px;
+        font-weight: 600;
+    }
+    .nav-btn a{
+        padding: 0.5rem;
+        font-size: 12px;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-heading h1{
+        font-size: 2.25rem;
+    }
+    .banner-heading p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .banner-img, .banner-img img{
+        width: 600px;
+        height: 400px;
+    }
+
+    .client-logo{
+        width: 100vw;
+        column-gap: 1.5rem;
+        justify-content: space-evenly;
+    }
+    .sectors-heading{
+        width: 480px;
+    }
+    .card-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card h2{
+        padding-top: 0.5rem;
+    }
+    .helping{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .helping-lt h1{
+        width: 285px;
+        font-size: 25px;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .helping-lt p{
+        font-size: 12px;
+    }
+    .helping-rt{
+        width: 480px;
+        gap: 2.2rem;
+    }
+    .future-header h1{
+        width: 275px;
+        font-size: 20px;
+    }
+    .future-card{
+        width: 480px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: 5rem;
+        row-gap: 1rem;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact-form h2{
+        font-size: 30px;
+        text-align: center;
+    }
+    .footer{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 35%;
+    }
+   
+}
+
+
+/*for screen width less than 600*/
+
+@media only screen and (max-width: 600px) {
+    .navbar{
+        width: 95vw;
+        position: fixed;
+        top:0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .banner{
+        width: 100vw;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+        row-gap: 1rem;
+    }
+    .banner-img{
+        width: 100vw;
+        height: auto;
+    }
+    .banner-img img{
+        width: 100%;
+        height: auto;
+    }
+    .banner-heading{
+        width: 95vw;
+    }
+    .banner-heading h1{
+        font-size: 2rem;
+    }
+    .btn a{
+        padding: 8px 12px;
+    }
+    .clients{
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .clients h2, p{
+        padding: 0 15px;
+        text-align: center;
+    }
+    .clients p{
+        padding-top: 5px;
+    }
+    .client-logo{
+        width: 200px;
+        justify-content: space-between;
+        column-gap: 4rem;
+        row-gap: 3rem;
+    }
+
+    .key-sectors{
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .helping{
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .helping-lt{
+        padding: 0 15px;
+    }
+    .helping-lt h1{
+        margin-left: 2rem;
+        text-align: center;
+    }
+    .helping-rt{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .helping-card{
+        width: 200px;
+    }
+    .helping-card i{
+        font-size: 32px;
+        margin-top: 2px;
+    }
+    .helping-card h2{
+        font-size:25px;
+    }
+    .helping-card p{
+        font-size: 12px;
+        text-align: left;
+        margin-left: -12px;
+    }
+    .future{
+        width: 95vw; /*it will remain*/
+        margin: 0 auto;
+        padding: 6rem 1rem;
+    }
+    .future-header{
+        width: 100vw;
+    }
+    .future-header p{
+        width: 90%;
+    }
+    .future-card{
+        width: 380px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: 4.5rem;
+        margin: 0 auto;
+        row-gap: 0.1rem;
+        margin-bottom: -10px;
+    }
+    .future-singlecard{
+        width: 150px;
+    }
+    .future-singlecard img{
+        width: 150px;
+    }
+    .future-text-card{
+        width: 135px;
+        left: 8px;
+    }
+    .future-text-card p{
+        font-size: 11.5px;
+    }
+    .future-text-card a{
+        font-size: 12px;
+    }
+    .contact{
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .contact-form{
+        width: 380px;
+    }
+    .contact-form h2{
+        font-size: 25px;
+    }
+    .contact-form input{
+        width: 100%;
+        padding: 8px 16px 8px 16px;
+    }
+   
+    .footer{
+        width: 100vw;
+        margin: 0 auto;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 15%;
+    }
+    .footer-logo img{
+        margin-left: 3px;
+    }
+    .middle-2{
+        margin-left: 10px;
+    }
+
+    .subscription{
+       padding-left: 10px;
+
+    }
+    .subscription h2{
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    .subscription input{
+        width: 100%;
+        margin-left: 5px;
+    }
+    .subscription button, .sbs-btn{
+        top: -12px;
+        left: -2px;
+    }
+
+}
+@media only screen and (max-width: 480px) {
+    .navbar{
+        width: 100vw;
+    }
+    .logo{
+        margin-left: 15px;
+        line-height: 60px;
+    }
+    .nav-btn{
+        display: none;
+    }
+    .chkbox-reg{
+        display: block;
+    }
+    .client-logo{
+        width: 210px;
+        justify-content: space-between;
+        column-gap: 4rem;
+    }
+    .sectors-heading{
+        width: 280px;
+    }
+    .sectors-heading h1{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        padding-bottom: 0.75rem;
+    }
+    .sectors-heading p{
+        line-height: 1rem;
+    }
+    .helping-lt{
+        width: 100vw;
+    }
+
+    .future-header h1{
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+   
+    .future-card {
+        width: 280px;
+        margin: 0 auto;
+        column-gap: 20px;
+    }
+    .future-singlecard, .future-singlecard img{
+        width: 130px;
+    }
+    .future-text-card{
+        width: 118px;
+        left: 5px;
+    }
+
+    .contact-form{
+        width: 95vw;
+    }
+   .footer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.2rem;
+   }
+   .middle-2{
+    justify-content: space-between;
+   }
+   .subscription input{
+    align-self: center;
+   }
+   
+} 
